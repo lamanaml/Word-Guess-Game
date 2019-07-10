@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Word Guess Game</title>
+  </head>
+  <body>
+
+    <h1>Open the console to see the magic!</h1>
+    <!--computer selects a dessert randomly-->
+    <!--computer displays "-" to indicate the number of letters in the word-->
+
+    <script>
+
+    // This array contains our list of words.
+    var desserts = ["Pie", "Cake", "Cookies", "Milk Shake"];
+    var guesses = 0
+    var score = 0
+    
+    var currentWord = desserts[Math.floor(Math.random() * desserts.length)];
+
+    var answerArray = [];
+        for (var i = 0; i < currentWord.length; i++) {
+	    answerArray[i] = "_ ";
+        document.write(answerArray);
+         
+     }
+    remainingLetters = currentWord.length;
+    userGuess = prompt("Please guess a letter");
+
+  
+
+    
+     
+    
+
+     
+    //}
+console.log(currentWord);
+console.log(currentWord.length);
+console.log(userGuess);
+
+    </script>
+
+  </body>
+</html>
