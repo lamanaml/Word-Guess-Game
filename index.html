@@ -6,14 +6,14 @@
   </head>
   <body>
 
-    <h1>Open the console to see the magic!</h1>
+   
     <!--computer selects a dessert randomly-->
     <!--computer displays "-" to indicate the number of letters in the word-->
 
     <script>
 
     // This array contains our list of words.
-    var desserts = ["Pie", "Cake", "Cookies", "Milk Shake"];
+    var desserts = ["Cheesecake","Banana Pudding", "Apple Pie", "Chocolate Cake", "Chocolate Chip Cookies", "Milk Shake"];
     var guesses = 0
     var score = 0
     
@@ -22,24 +22,40 @@
     var answerArray = [];
         for (var i = 0; i < currentWord.length; i++) {
 	    answerArray[i] = "_ ";
-        document.write(answerArray);
-         
+      document.write(answerArray[i]);
+      var remainingLetters = currentWord.length;
      }
-    remainingLetters = currentWord.length;
-    userGuess = prompt("Please guess a letter");
 
-  
+     while (remainingLetters > 0) {
+         alert(answerArray.join(" "));
+         userGuess = prompt("Please guess a letter");
+          if (userGuess == null){
+            break;
+            } 
+        //     else if (guess.length ==! 1) {
+        //     alert(choose one letter at a time);
+        //     }
+        //  // var guesses = guesses++;
+        //   else{
+            for (var j = 0; j < currentWord.length; j++){
+              if (currentWord[j] === userGuess){
+                answerArray[j] = userGuess;
+                remainingLetters--;
+                score++;
+              }
+              
+       }
+     }
+     
+ guesses++;
 
     
-     
-    
-
-     
-    //}
 console.log(currentWord);
 console.log(currentWord.length);
 console.log(userGuess);
-
+console.log("guesses " + guesses);
+console.log("score " + score);
+console.log("remaining letters " + remainingLetters);
     </script>
 
   </body>
