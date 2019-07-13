@@ -3,60 +3,13 @@
   <head>
     <meta charset="UTF-8">
     <title>Word Guess Game</title>
+ 
   </head>
   <body>
+    <div id="score"></div>
+    <div id="remainingLetters"></div>
 
-   
-    <!--computer selects a dessert randomly-->
-    <!--computer displays "-" to indicate the number of letters in the word-->
-
-    <script>
-
-    // This array contains our list of words.
-    var desserts = ["Cheesecake","Banana Pudding", "Apple Pie", "Chocolate Cake", "Chocolate Chip Cookies", "Milk Shake"];
-    var guesses = 0
-    var score = 0
-    
-    var currentWord = desserts[Math.floor(Math.random() * desserts.length)];
-
-    var answerArray = [];
-        for (var i = 0; i < currentWord.length; i++) {
-	    answerArray[i] = "_ ";
-      document.write(answerArray[i]);
-      var remainingLetters = currentWord.length;
-     }
-
-     while (remainingLetters > 0) {
-         alert(answerArray.join(" "));
-         userGuess = prompt("Please guess a letter");
-          if (userGuess == null){
-            break;
-            } 
-        //     else if (guess.length ==! 1) {
-        //     alert(choose one letter at a time);
-        //     }
-        //  // var guesses = guesses++;
-        //   else{
-            for (var j = 0; j < currentWord.length; j++){
-              if (currentWord[j] === userGuess){
-                answerArray[j] = userGuess;
-                remainingLetters--;
-                score++;
-              }
-              
-       }
-     }
-     
- guesses++;
-
-    
-console.log(currentWord);
-console.log(currentWord.length);
-console.log(userGuess);
-console.log("guesses " + guesses);
-console.log("score " + score);
-console.log("remaining letters " + remainingLetters);
-    </script>
+   <script src="assets/javascript/game.js"> </script>
 
   </body>
 </html>
