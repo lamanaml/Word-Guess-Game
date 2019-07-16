@@ -9,47 +9,36 @@
   console.log(currentWord)
   var answerArray = []; 
   
-
-
-//************************************************** */
+  
+//select a random word from array
 for (var i = 0; i < currentWord.length; i++) {
   answerArray[i] = "_ ";
   var remainingLetters = currentWord.length;
 }
-
-//write variables to html
- 
- document.getElementById("guessesRemaining").innerHTML = remainingGuesses;
- document.getElementById("yourScore").innerHTML = score;
-
-  
+document.getElementById("lettersRemaining").innerHTML = answerArray.join("  ");
+//for all remaining letters  
 if (remainingLetters > 0) {
-  document.getElementById("lettersRemaining").innerHTML = answerArray.join("  ");
+  
 
   for (var j = 0; j < currentWord.length; j++){
     document.onkeyup = function(event) {
     var userGuess = event.key;
     document.getElementById("letterGuessed").innerHTML = userGuess;
-        
+    remainingGuesses--;
+    document.getElementById("guessesRemaining").innerHTML = remainingGuesses;
+      if (remainingGuesses == 0 ) {
+        alert("Sorry, you lose! Press any key to start over")
+
+      }
+  }
+        //match user guess to letter array and replace answer array with use guess
       if (currentWord[j] === "userGuess"){
         answerArray[j] = userGuess
-        console.log(currentWord[j])
-        console.log(answerArray[j])
-        alert("yay")
-        remainingLetters--;
+        document.getElementById("lettersRemaining").innerHTML = answerArray.join("  ");
         score++;
-
-
-       
-
-          
-        // var newScore = document.createElement('div'); 
-        // newScore.textContent = score
-        // score.appendChild(newScore); 
+        document.getElementById("yourScore").innerHTML = score;   
       }
     }
-  }
 }
-      else{
-        alert("You Win!!");
-      }
+
+
