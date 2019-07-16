@@ -19,24 +19,27 @@ document.getElementById("lettersRemaining").innerHTML = answerArray.join("  ");
 //for all remaining letters  
 if (remainingLetters > 0) {
   
-
-  for (var j = 0; j < currentWord.length; j++){
-    document.onkeyup = function(event) {
+document.onkeyup = function(event) {
     var userGuess = event.key;
+  for (var j = 0; j < currentWord.length; j++){
+    
     document.getElementById("letterGuessed").innerHTML = userGuess;
     remainingGuesses--;
     document.getElementById("guessesRemaining").innerHTML = remainingGuesses;
-      if (remainingGuesses == 0 ) {
-        alert("Sorry, you lose! Press any key to start over")
-
-      }
-  }
+      // if (remainingGuesses === 0 ) {
+      //   alert("Sorry, you lose! Press any key to start over")
+      // }
+  
         //match user guess to letter array and replace answer array with use guess
-      if (currentWord[j] === "userGuess"){
+        if (currentWord[j] === userGuess){
+        console.log(currentWord[j])
         answerArray[j] = userGuess
+        console.log(answerArray)
+        
         document.getElementById("lettersRemaining").innerHTML = answerArray.join("  ");
         score++;
-        document.getElementById("yourScore").innerHTML = score;   
+        document.getElementById("yourScore").innerHTML = score;
+        }   
       }
     }
 }
