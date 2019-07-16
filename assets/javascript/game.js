@@ -1,51 +1,55 @@
 
-    //computer selects a dessert randomly-->
-    //computer displays "-" to indicate the number of letters in the word
+// global variables
+// --------------------------------------
+  var desserts = ["cheesecake","banana pudding", "apple pie", "chocolate cake", "chocolate chip cookies", "milk shake"]; // word array
+  var guesses = 0
+  var score = 0
+  var remainingGuesses = 15
+  var currentWord = desserts[Math.floor(Math.random() * desserts.length)];
+  console.log(currentWord)
+  var answerArray = []; 
+  
 
 
-    //This array contains our list of words.
-    var desserts = ["cheesecake","banana pudding", "apple pie", "chocolate cake", "chocolate chip cookies", "milk shake"];
-    var guesses = 0
-    var score = 0
-    
+//************************************************** */
+for (var i = 0; i < currentWord.length; i++) {
+  answerArray[i] = "_ ";
+  var remainingLetters = currentWord.length;
+}
 
-    // select a random word from te desserts array
-    var currentWord = desserts[Math.floor(Math.random() * desserts.length)];
-    
-    // show an underscore for each letter in the current word 
-    var answerArray = [];
-        for (var i = 0; i < currentWord.length; i++) {
-	    answerArray[i] = "_ ";
-      document.write(answerArray[i]);
-      var remainingLetters = currentWord.length;
-     }
+//write variables to html
+ 
+ document.getElementById("guessesRemaining").innerHTML = remainingGuesses;
+ document.getElementById("yourScore").innerHTML = score;
 
-    // if there are letters available, prompt the user to enter a letter
-     while (remainingLetters > 0) {
-         alert(answerArray.join(" "));
-         userGuess = prompt("Please guess a letter");
-          if (userGuess == null){
-            break;
-            } 
+  
+if (remainingLetters > 0) {
+  document.getElementById("lettersRemaining").innerHTML = answerArray.join("  ");
 
-    // if the user guess = any of the letters in the current word, add the letter in the correct space, decrement the remaining letters, increment the score
-      for (var j = 0; j < currentWord.length; j++){
-        if (currentWord[j] === userGuess){
-          answerArray[j] = userGuess;
-          remainingLetters--;
-          score++;
-          var newScore = document.createElement('p'); 
-          newScore.textContent = score
-          score.appendChild(newScore); 
-       }
-     }
-     }
- guesses++;
+  for (var j = 0; j < currentWord.length; j++){
+    document.onkeyup = function(event) {
+    var userGuess = event.key;
+    document.getElementById("letterGuessed").innerHTML = userGuess;
+        
+      if (currentWord[j] === "userGuess"){
+        answerArray[j] = userGuess
+        console.log(currentWord[j])
+        console.log(answerArray[j])
+        alert("yay")
+        remainingLetters--;
+        score++;
 
 
+       
 
-console.log(currentWord);
-console.log(currentWord.length);
-console.log(userGuess);
-console.log("guesses " + guesses);
-console.log ("score " + score);
+          
+        // var newScore = document.createElement('div'); 
+        // newScore.textContent = score
+        // score.appendChild(newScore); 
+      }
+    }
+  }
+}
+      else{
+        alert("You Win!!");
+      }
