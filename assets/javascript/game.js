@@ -24,6 +24,7 @@ if (remainingLetters > 0) {
       for (var j = 0; j < currentWord.length; j++){
       document.getElementById("letterGuessed").innerHTML = userGuess;
       
+      
       //match user guess to letter array and replace answer array with use guess
       if (currentWord[j] === userGuess){
       answerArray[j] = userGuess
@@ -32,6 +33,11 @@ if (remainingLetters > 0) {
       document.getElementById("yourScore").innerHTML = score;
       }
     } 
+    if (remainingLetters === 0){
+        alert("OMG!!! You guessed it!")
+        console.log(remainingLetters)
+         wins++
+    }
     if (remainingGuesses === 0 ) {
         alert("Sorry, you lose! Press any key to start over")
       }
@@ -39,13 +45,9 @@ if (remainingLetters > 0) {
       console.log(remainingGuesses)
         document.getElementById("guessesRemaining").innerHTML = remainingGuesses; 
 
-      if (remainingLetters === 0){
-        alert("OMG!!! You guessed it!")
-        console.log(remainingLetters)
-         wins++
+      
     }
     
-    }
 }
     
       
