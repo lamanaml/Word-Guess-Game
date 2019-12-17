@@ -4,11 +4,10 @@
     color: white;
 }
 
-.padding {
+.pad {
     padding:20px;
     margin:20px 0px 20px 0px;
 }
-
 
 .footer {
    position: fixed;
