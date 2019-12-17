@@ -29,7 +29,7 @@ var currentWord = desserts[Math.floor(Math.random() * desserts.length)];
   }
   document.getElementById("lettersRemaining").innerHTML = answerArray.join("  ");
 
-  c
+
   console.log(currentWord)
 
 

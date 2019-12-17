@@ -14,11 +14,11 @@
 
 
 ## Skills used
-HTML
+* HTML
 
-CSS / Bootstrap
+* CSS / Bootstrap
 
-JavaScipt
+* JavaScipt
 
 
 ### Live Site
