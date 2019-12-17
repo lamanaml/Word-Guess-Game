@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Word Guess Game</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
+   </head>
+ 
+  <body >
+    <div class="jumbotron bg">
+      <div class="container ">
+        <h1 class="display-4">Guess That Dessert!</h1>
+        <p class="lead">You will be guessing the world's most popular desserts.</p>
+      </div>
+    </div>
+    
+    <div class="container" >
+      <h5>Press any letter to start guessing the dessert!</h2>   
+   
+      <div class="alert-warning padding"> 
+      <h3 >Guess This word:</h3>
+      <div id="lettersRemaining"></div>
+      </div>
+    
+       <div class="alert alert-secondary" role="alert">
+         <b>Your letter guessed  </b>
+       <div id="letterGuessed"> </div>
+       </div>
+ 
+
+
+      <div class="card-group">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Guesses Remaining</h5>
+            <p class="card-text"> <div id="guessesRemaining"></div></p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Correct Words Guessed</h5>
+            <p class="card-text"><div id="yourScore"> </div></p>
+          </div>
+        </div>
+  
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Wins</h5>
+            <p class="card-text"><div id="yourWins"> </div></p>
+          </div>
+        </div>
+      </div>
+    </div>
+        
+   
+   <script src="assets/javascript/game.js"> </script>
+
+  </body>
+</html>
