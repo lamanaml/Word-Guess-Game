@@ -8,3 +8,16 @@
     padding:20px;
     margin:20px 0px 20px 0px;
 }
+
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: red;
+  color: grey;
+  text-align: center;
+}
+
+
