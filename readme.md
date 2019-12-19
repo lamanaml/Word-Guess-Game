@@ -2,15 +2,18 @@
 
 ## Introduction
 
-> Dessert Themed hangman style word guess game featuring JavaScrpt.
+> Dessert Themed hangman style word guess game featuring JavaScript.
 
 ## Instructions
 
  1. Press any key to start game
 
- 2. Enter only letters to guess the word on screen 
+ 2. Enter only letters to guess the Dessert
 
- 3. game will continue in this manner
+ 3. If you miss 9 letters, you lose!
+
+ ## Mockup
+![Image description](http://www.lamanadonadelle.com/images/thumbs/wordguess.jpg)
 
 
 ## Skills used
@@ -18,7 +21,7 @@
 
 * CSS / Bootstrap
 
-* JavaScipt
+* JavaScript
 
 
 ### Live Site

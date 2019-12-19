@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Word Guess Game</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="http://www.lamanadonadelle.com/assets/css/custom.css">
     <link rel="stylesheet" href="assets/css/style.css">
     
    </head>
@@ -23,12 +24,12 @@
    
       <div class="alert-warning pad"> 
       <h3 >The word:</h3>
-      <div id="lettersRemaining"></div>
+      <div id="word-blanks"></div>
       </div>
     
        <div class="alert alert-secondary" role="alert">
-         <b>Your letter guessed:</b>
-       <span id="letterGuessed"> </span>
+         <b>Incorrect Letters Guessed:</b>
+       <span id="wrong-guesses"> </span>
        </div>
  
 
@@ -37,28 +38,23 @@
         <div class="card">
           <div class="card-body">
             <h5 class="card-title">Guesses Remaining</h5>
-            <p class="card-text"> <div id="guessesRemaining"></div></p>
+            <p class="card-text"> <div id="guesses-left"></div></p>
           </div>
         </div>
 
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Correct Letters Guessed</h5>
-            <p class="card-text"><div id="yourScore"> </div></p>
-          </div>
-        </div>
+        
   
         <div class="card">
           <div class="card-body">
             <h5 class="card-title">Wins</h5>
-            <p class="card-text"><div id="yourWins"> </div></p>
+            <p class="card-text"><div id="win-counter"> </div></p>
           </div>
         </div>
       </div>
     </div>
         
    <div class="footer">
-      <p><a href="https://github.com/lamanaml/Word-Guess-Game">GitHub Repo</a></p>
+      <p>LaMana's <a href="http://www.lamanadonadelle.com">Live Portfolio</a> | <a href="https://github.com/lamanaml/Word-Guess-Game">GitHub Repo</a></p>
     </div>
   
  <script src="assets/javascript/game.js"> </script>
